@@ -276,7 +276,7 @@ footer {
 }
 
 #character-details {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
     width: 100%;
     display: flex;
     flex-direction: column;
