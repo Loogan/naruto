@@ -43,6 +43,7 @@ header{
 
 .container{
     max-width: 1260px;
+    margin: 0 auto;
 }
 
 .menu{
@@ -274,6 +275,26 @@ footer {
     color: white;
 }
 
+#character-details {
+    padding: 2rem 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    color: #ffffff;
+}
+
+#character-details > a {
+    align-self: flex-start;
+    text-decoration: none;
+    color: #ffffff;
+    transition: color ease 200ms;
+}
+
+#character-details > a:hover {
+    color: #422f1e;
+}
 
 @media screen and (min-width: 600px){
     #menuContent {
