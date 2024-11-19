@@ -1,4 +1,4 @@
-const CHARS = [
+const CHARS_SHINOBI = [
   {
     name: 'Naruto',
     image: './assets/images/herois/naruto.png',
@@ -189,27 +189,26 @@ const CHARS_AKATSUKI = [
   },
 ];
 
-
-const smallSwiperWrapper = document.querySelector('#carrouselSwiper .swiper-wrapper');
-const largeSwiperWrapper = document.querySelector('#carrouselSwiperLarge .swiper-wrapper');
+const shinobiSmallSwiperWrapper = document.querySelector('#carrouselSwiper .swiper-wrapper');
+const shinobiLargeSwiperWrapper = document.querySelector('#carrouselSwiperLarge .swiper-wrapper');
 
 // Gera os slides dinamicamente
-CHARS.forEach((char, index) => {
+CHARS_SHINOBI.forEach((char, index) => {
   const slideHTML = `
-        <div class="swiper-slide">
-            <a href="./details/?id=${index}">
-                <div class="carrousel">
-                    <article class="card">
-                        <img src="${char.image}" alt="${char.name}'s picture">
-                        <div class="card-footer">${char.name}</div>
-                    </article>
-                </div>
-            </a>
+    <div class="swiper-slide">
+      <a href="./details/?id=${index}">
+        <div class="carrousel">
+          <article class="card">
+              <img src="${char.image}" alt="${char.name}'s picture">
+              <div class="card-footer">${char.name}</div>
+          </article>
         </div>
+      </a>
+    </div>
     `;
   
-  smallSwiperWrapper.innerHTML += slideHTML;
-  largeSwiperWrapper.innerHTML += slideHTML;
+  shinobiSmallSwiperWrapper.innerHTML += slideHTML;
+  shinobiLargeSwiperWrapper.innerHTML += slideHTML;
 });
 
 const akatsukiSmallSwiperWrapper = document.querySelector('#akatsukiSwiper .swiper-wrapper');
@@ -218,16 +217,16 @@ const akatsukiLargeSwiperWrapper = document.querySelector('#akatsukiSwiperLarge 
 // Gera os slides da Akatsuki dinamicamente
 CHARS_AKATSUKI.forEach((char, index) => {
   const akatsukiSlideHTML = `
-        <div class="swiper-slide">
-            <a href="./details/?id=${index}">
-                <div class="carrousel">
-                    <article class="card">
-                        <img src="${char.image}" alt="${char.name}'s picture">
-                        <div class="card-footer">${char.name}</div>
-                    </article>
-                </div>
-            </a>
+    <div class="swiper-slide">
+      <a href="./details/?id=${index}">
+        <div class="carrousel">
+          <article class="card">
+            <img src="${char.image}" alt="${char.name}'s picture">
+            <div class="card-footer">${char.name}</div>
+          </article>
         </div>
+      </a>
+    </div>
     `;
   
   akatsukiSmallSwiperWrapper.innerHTML += akatsukiSlideHTML;
