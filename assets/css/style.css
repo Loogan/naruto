@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+html, body {
+  overflow-x: hidden;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(235deg, #2c3e50, #e67e22);
+  background-size: cover;
+  width: 100%;
+}
+
+main {
+  flex-grow: 1; /* Faz o conteúdo ocupar todo o espaço restante*/
+}
+
+header {
+  width: 100%;
+  background-color: rgb(197, 125, 16);
+  height: 60px;
+}
+
+.hr-container {
+  margin-top: 100px;
+}
+
+.container {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+
+.menu {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.nav {
+  width: 100%;
+  background-color: rgb(197, 125, 16);
+  height: 60px;
+  display: flex;
+
+}
+
+.right {
+  display: none;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  padding-left: 10px;
+}
+
+#menuContent {
+  position: fixed; /* Fixa o conteúdo no topo da tela */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  background-color: rgba(0, 0, 0, 0.603); /* Cor de fundo do box */
+  padding: 20px;
+  display: none; /* Esconde por padrão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o box */
+  border-radius: 10px; /* Arredonda as bordas */
+  z-index: 1000; /* Certifica-se que está acima de outros elementos */
+  width: 300px; /* Largura do box */
+  text-align: center; /* Centraliza o conteúdo dentro do box */
+}
+
+/* Mostra o box quando a classe "show" for adicionada */
+#menuContent.show {
+  display: block;
+}
+
+#menuContent a {
+  text-decoration: none;
+  color: black;
+  margin: 10px 0;
+  display: block; /* Exibe os links em blocos separados */
+  padding: 10px;
+  background-color: rgb(233, 166, 66);
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#menuContent a:hover {
+  background-color: rgb(197, 125, 16); /* Efeito hover nos links */
+}
+
+.right a {
+  display: flex;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
+#singup {
+  border: none;
+  padding: 5px 15px 5px 15px;
+  background-color: rgb(233, 166, 66);
+  border-radius: 25px;
+}
+
+.introduction {
+  background-color: white;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.7) 100%),
+  url(../images/image2.png);
+  width: 100%;
+  height: 15em;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.section1 {
+  text-align: center;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.253);
+  color: white;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 13px;
+}
+
+.content {
+  width: 100%;
+  padding: 50px 10px 0 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  background-color: rgba(233, 166, 66, 0.205);
+  padding: 5px 15px 5px 15px;
+  border: solid 1px;
+  border-radius: 25px;
+  margin-bottom: 80px;
+
+}
+
+.content-carrousel {
+  height: 100%;
+  width: 100%;
+}
+
+.carrousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  width: 190px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: 100%;
+  opacity: 100%;
+}
+
+.card-footer {
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+.card-footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.swiper {
+  width: 240px;
+  height: 320px;
+}
+
+.swiper-slide {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+#carrouselSwiper {
+  width: 200px;
+}
+
+#akatsukiSwiper {
+  width: 200px;
+}
+
+.swiper-slide:nth-child(1n) {
+  background-color: rgb(233, 166, 66);
+}
+
+a {
+  text-decoration: none;
+}
+
+#carrouselSwiperLarge {
+  display: none;
+}
+
+#akatsukiSwiperLarge {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.705);
+  position: relative;
+  bottom: 0;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 140px;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+.footer a {
+  font-style: normal;
+  color: white;
+}
+
+#character-details {
+  padding: 2rem 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffff;
+}
+
+#character-details > a {
+  align-self: flex-start;
+  text-decoration: none;
+  color: #ffffff;
+  transition: color ease 200ms;
+}
+
+#character-details > a:hover {
+  color: #422f1e;
+}
+
+@media screen and (min-width: 600px) {
+  #menuContent {
+    display: flex; /* Mostra os links lado a lado */
+    position: static;
+    width: auto;
+    height: auto;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    padding: 0;
+    background-color: inherit;
+  }
+
+  #menuContent a {
+    opacity: 1;
+    transform: none;
+    margin: 0 10px;
+    display: inline-block;
+    padding: 10px 20px;
+    transition: none; /* Sem animação para telas maiores */
+  }
+
+  #menuContent.show {
+    display: flex;
+  }
+
+  .right {
+    display: flex;
+  }
+
+  .left {
+    display: none;
+  }
+
+  .nav {
+    justify-content: end;
+    align-items: center;
+  }
+
+  .hr-container {
+    max-width: 1260px;
+    margin: 30px auto; /* Centers the container */
+  }
+
+  .content {
+    padding: 50px 10px 0 10px;
+    margin-top: auto;
+  }
+
+  #carrouselSwiper {
+    display: none;
+  }
+
+  #akatsukiSwiper {
+    display: none;
+  }
+
+  .swiper-slide {
+    margin: 0;
+
+  }
+
+  #carrouselSwiperLarge {
+    display: block; /* Exibe o swiper grande */
+    width: 1050px;
+    height: 290px;
+    margin-bottom: 40px;
+  }
+
+  #akatsukiSwiperLarge {
+    display: block; /* Exibe o swiper grande */
+    width: 1050px;
+    height: 290px;
+    margin-bottom: 40px;
+  }
+
+
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #carrouselSwiper {
+    display: block; /* Exibe o swiper pequeno */
+  }
+
+  #carrouselSwiperLarge {
+    display: none; /* Esconde o swiper grande */
+  }
+
+  #akatsukiSwiperLarge {
+    display: none;
+  }
+}
