@@ -1,19 +1,3 @@
-// const CHAR_PICTURE = document.getElementById('char-picture'),
-//   CHAR_NAME = document.getElementById('char-name'),
-//   CHAR_DESC = document.getElementById('char-desc');
-
-// const QUERY_STRING = window.location.search;
-
-// const URL_PARAMS = new URLSearchParams(QUERY_STRING);
-
-// let id = URL_PARAMS.get('id'),
-//   char = Number(URL_PARAMS.get('char')), // 1 ou 2
-//   personagens = char === 1 ? CHARS_SHINOBI : CHARS_AKATSUKI;
-
-// CHAR_PICTURE.setAttribute('src', personagens[id].image);
-// CHAR_NAME.innerHTML = personagens[id].name;
-// CHAR_DESC.innerHTML = personagens[id].description;
-
 const CHAR_PICTURE = document.getElementById('char-picture'),
       CHAR_NAME = document.getElementById('char-name'),
       CHAR_DESC = document.getElementById('char-desc');
