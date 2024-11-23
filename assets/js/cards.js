@@ -1,205 +1,70 @@
+// Função para determinar o caminho correto da imagem
+function getImagePath(imageName, category) {
+  // Verifica se estamos na página de detalhes, comparando o pathname
+  const isDetailsPage = window.location.pathname.includes('details');
+  
+  // Retorna o caminho correto dependendo da página e categoria (herois ou vilões)
+  if (isDetailsPage) {
+    return `../assets/images/${category}/${imageName}`; // Caminho para a página de detalhes
+  } else {
+    return `./assets/images/${category}/${imageName}`; // Caminho para a página principal
+  }
+}
+
 const CHARS_SHINOBI = [
-  {
-    name: 'Naruto',
-    image: '../assets/images/herois/naruto.png',
-    description: '',
-  },
-  {
-    name: 'Sasuke',
-    image: '../assets/images/herois/sasuke.png',
-    description: '',
-  },
-  {
-    name: 'Sakura',
-    image: '../assets/images/herois/sakura.png',
-    description: '',
-  },
-  {
-    name: 'Kakashi',
-    image: '../assets/images/herois/kakashi.png',
-    description: '',
-  },
-  {
-    name: 'Minato',
-    image: '../assets/images/herois/minato.png',
-    description: '',
-  },
-  {
-    name: 'Jiraya',
-    image: '../assets/images/herois/jiraya.png',
-    description: '',
-  },
-  {
-    name: 'Tsunade',
-    image: '../assets/images/herois/tsunade.png',
-    description: '',
-  },
-  {
-    name: 'Hashirama',
-    image: '../assets/images/herois/hashirama.png',
-    description: '',
-  },
-  {
-    name: 'Guy',
-    image: '../assets/images/herois/guy.png',
-    description: '',
-  },
-  {
-    name: 'Neji',
-    image: '../assets/images/herois/neji.png',
-    description: '',
-  },
-  {
-    name: 'Hinata',
-    image: '../assets/images/herois/hinata.png',
-    description: '',
-  },
-  {
-    name: 'Rock Lee',
-    image: '../assets/images/herois/rock-lee.png',
-    description: '',
-  },
-  {
-    name: 'Ino',
-    image: '../assets/images/herois/ino.png',
-    description: '',
-  },
-  {
-    name: 'Choji',
-    image: '../assets/images/herois/choji.png',
-    description: '',
-  },
-  {
-    name: 'Shikamaru',
-    image: '../assets/images/herois/shikamaru.png',
-    description: '',
-  },
-  {
-    name: 'Shino',
-    image: '../assets/images/herois/shino.png',
-    description: '',
-  },
-  {
-    name: 'Gaara',
-    image: '../assets/images/herois/gaara.png',
-    description: '',
-  },
-  {
-    name: 'Sai',
-    image: '../assets/images/herois/sai.png',
-    description: '',
-  },
-  {
-    name: 'Raikage',
-    image: '../assets/images/herois/raikage.png',
-    description: '',
-  },
-  {
-    name: 'Rin',
-    image: '../assets/images/herois/rin.png',
-    description: '',
-  },
-  {
-    name: 'Sarutobi',
-    image: '../assets/images/herois/sarutobi.png',
-    description: '',
-  },
-  {
-    name: 'Iruka',
-    image: '../assets/images/herois/iruka.png',
-    description: '',
-  },
-  {
-    name: 'Kurenai',
-    image: '../assets/images/herois/kurenai.png',
-    description: '',
-  },
+  { name: 'Naruto', image: 'naruto.png', description: '' },
+  { name: 'Sasuke', image: 'sasuke.png', description: '' },
+  { name: 'Sakura', image: 'sakura.png', description: '' },
+  { name: 'Kakashi', image: 'kakashi.png', description: '' },
+  { name: 'Minato', image: 'minato.png', description: '' },
+  { name: 'Jiraya', image: 'jiraya.png', description: '' },
+  { name: 'Tsunade', image: 'tsunade.png', description: '' },
+  { name: 'Hashirama', image: 'hashirama.png', description: '' },
+  { name: 'Guy', image: 'guy.png', description: '' },
+  { name: 'Neji', image: 'neji.png', description: '' },
+  { name: 'Hinata', image: 'hinata.png', description: '' },
+  { name: 'Rock Lee', image: 'rock-lee.png', description: '' },
+  { name: 'Ino', image: 'ino.png', description: '' },
+  { name: 'Choji', image: 'choji.png', description: '' },
+  { name: 'Shikamaru', image: 'shikamaru.png', description: '' },
+  { name: 'Shino', image: 'shino.png', description: '' },
+  { name: 'Gaara', image: 'gaara.png', description: '' },
+  { name: 'Sai', image: 'sai.png', description: '' },
+  { name: 'Raikage', image: 'raikage.png', description: '' },
+  { name: 'Rin', image: 'rin.png', description: '' },
+  { name: 'Sarutobi', image: 'sarutobi.png', description: '' },
+  { name: 'Iruka', image: 'iruka.png', description: '' },
+  { name: 'Kurenai', image: 'kurenai.png', description: '' },
 ];
 
 const CHARS_AKATSUKI = [
-  {
-    name: 'Itachi',
-    image: '../assets/images/viloes/itachi.png',
-    description: 'lorem ipsum dolor sit amet consectetur adipiscing elit',
-  },
-  {
-    name: 'Kisame',
-    image: '../assets/images/viloes/kisame.png',
-    description: '',
-  },
-  {
-    name: 'Pain',
-    image: '../assets/images/viloes/pain.png',
-    description: '',
-  },
-  {
-    name: 'Hidan',
-    image: '../assets/images/viloes/hidan.png',
-    description: '',
-  },
-  {
-    name: 'Deidara',
-    image: '../assets/images/viloes/deidara.png',
-    description: '',
-  },
-  {
-    name: 'Kakusu',
-    image: '../assets/images/viloes/kakusu.png',
-    description: '',
-  },
-  {
-    name: 'Konan',
-    image: '../assets/images/viloes/konan.png',
-    description: '',
-  },
-  {
-    name: 'Orochimaru',
-    image: '../assets/images/viloes/orochimaru.png',
-    description: '',
-  },
-  {
-    name: 'Sasori',
-    image: '../assets/images/viloes/sasori.png',
-    description: '',
-  },
-  {
-    name: 'Zetsu',
-    image: '../assets/images/viloes/zetsu.png',
-    description: '',
-  },
-  {
-    name: 'Obito',
-    image: '../assets/images/viloes/obito.png',
-    description: '',
-  },
-  {
-    name: 'Madara',
-    image: '../assets/images/viloes/madara.png',
-    description: '',
-  },
-  {
-    name: 'Kabuto',
-    image: '../assets/images/viloes/kabuto.png',
-    description: '',
-  },
-  {
-    name: 'Zabuza',
-    image: '../assets/images/viloes/zabuza.png',
-    description: '',
-  },
+  { name: 'Itachi', image: 'itachi.png', description: 'lorem ipsum dolor sit amet consectetur adipiscing elit' },
+  { name: 'Kisame', image: 'kisame.png', description: '' },
+  { name: 'Pain', image: 'pain.png', description: '' },
+  { name: 'Hidan', image: 'hidan.png', description: '' },
+  { name: 'Deidara', image: 'deidara.png', description: '' },
+  { name: 'Kakusu', image: 'kakusu.png', description: '' },
+  { name: 'Konan', image: 'konan.png', description: '' },
+  { name: 'Orochimaru', image: 'orochimaru.png', description: '' },
+  { name: 'Sasori', image: 'sasori.png', description: '' },
+  { name: 'Zetsu', image: 'zetsu.png', description: '' },
+  { name: 'Obito', image: 'obito.png', description: '' },
+  { name: 'Madara', image: 'madara.png', description: '' },
+  { name: 'Kabuto', image: 'kabuto.png', description: '' },
+  { name: 'Zabuza', image: 'zabuza.png', description: '' },
 ];
 
 const shinobiSmallSwiperWrapper = document.querySelector('#carrouselSwiper .swiper-wrapper');
 const shinobiLargeSwiperWrapper = document.querySelector('#carrouselSwiperLarge .swiper-wrapper');
 
-// Gera os slides dinamicamente
+// Gera os slides dos Shinobis dinamicamente
 CHARS_SHINOBI.forEach((char, index) => {
   const slideHTML = `
     <div class="swiper-slide">
       <a href="./details/?id=${index}&char=1">
         <div class="carrousel">
           <article class="card">
-              <img src="${char.image}" alt="${char.name}'s picture">
+              <img src="${getImagePath(char.image, 'herois')}" alt="${char.name}'s picture">
               <div class="card-footer">${char.name}</div>
           </article>
         </div>
@@ -221,7 +86,7 @@ CHARS_AKATSUKI.forEach((char, index) => {
       <a href="./details/?id=${index}&char=2">
         <div class="carrousel">
           <article class="card">
-            <img src="${char.image}" alt="${char.name}'s picture">
+            <img src="${getImagePath(char.image, 'viloes')}" alt="${char.name}'s picture">
             <div class="card-footer">${char.name}</div>
           </article>
         </div>
@@ -232,4 +97,3 @@ CHARS_AKATSUKI.forEach((char, index) => {
   akatsukiSmallSwiperWrapper.innerHTML += akatsukiSlideHTML;
   akatsukiLargeSwiperWrapper.innerHTML += akatsukiSlideHTML;
 });
-

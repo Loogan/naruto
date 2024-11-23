@@ -18,7 +18,11 @@ console.log('Personagem selecionado:', personagens[id]);
 
 // Certifique-se de que os elementos existem antes de tentar usar innerHTML
 if (personagens[id]) {
-  CHAR_PICTURE.setAttribute('src', personagens[id].image);
+  // Usa a função getImagePath para obter o caminho correto da imagem
+  const imagePath = getImagePath(personagens[id].image, char === 1 ? 'herois' : 'viloes');
+  
+  // Define os valores nos elementos da página
+  CHAR_PICTURE.setAttribute('src', imagePath);
   CHAR_NAME.innerHTML = personagens[id].name;
   CHAR_DESC.innerHTML = personagens[id].description;
 } else {
