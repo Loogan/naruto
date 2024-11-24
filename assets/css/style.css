@@ -12,18 +12,19 @@ header {
   justify-content: space-around;
 }
 
+/* Estilos gerais para o body e html */
 html, body {
-  overflow-x: hidden;
   height: 100%;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(235deg, #2c3e50, #e67e22);
+  overflow-x: hidden;
 }
 
+/* Corpo principal */
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(235deg, #2c3e50, #e67e22);
-  background-size: cover;
-  width: 100%;
   min-height: 100vh;
 }
 
@@ -31,6 +32,10 @@ header {
   width: 100%;
   background-color: rgb(197, 125, 16);
   height: 60px;
+}
+
+main {
+  flex-grow: 1;  /* Faz o conteúdo crescer */
 }
 
 .hr-container {
@@ -92,17 +97,30 @@ header {
 
 #menuContent a {
   text-decoration: none;
-  color: black;
+  color: white;  /* Cor do texto alterada para branco */
   margin: 10px 0;
-  display: block; /* Exibe os links em blocos separados */
-  padding: 10px;
+  display: block;
+  padding: 12px 20px; /* Aumentado o padding para um botão mais confortável */
   background-color: rgb(233, 166, 66);
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  border-radius: 30px; /* Bordas arredondadas mais suaves */
+  font-size: 16px;  /* Tamanho da fonte mais agradável */
+  font-weight: bold;  /* Deixa o texto mais forte */
+  text-align: center;  /* Garante o texto no centro */
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Adiciona animações suaves */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
+/* Efeito hover do botão */
 #menuContent a:hover {
-  background-color: rgb(197, 125, 16); /* Efeito hover nos links */
+  background-color: rgb(197, 125, 16); /* Cor de fundo no hover */
+  transform: translateY(-3px); /* Efeito de leve elevação */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Efeito focus */
+#menuContent a:focus {
+  outline: none;  /* Remove o contorno padrão do foco */
+  box-shadow: 0 0 0 3px rgba(233, 166, 66, 0.6); /* Adiciona um foco estilizado */
 }
 
 .right a {
@@ -171,7 +189,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza a transição para o carrossel */
+}
 
+.carrousel:hover {
+  transform: scale(1.05); /* Aumenta o carrossel ao passar o mouse */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0); /* Sombra suave para dar profundidade */
 }
 
 .card {
@@ -212,7 +235,6 @@ header {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-
 }
 
 .swiper-slide img {
@@ -246,25 +268,39 @@ a {
 
 footer {
   width: 100%;
-  padding: 10px;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Sombra sutil para dar profundidade */
+  border-top: 3px solid #e67e22;
   margin-top: 140px;
 }
 
 .footer {
   display: flex;
-  text-align: center;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1em;
   justify-content: center;
   width: 100%;
+  text-align: center;
+  color: white;
 }
 
 .footer a {
-  font-style: normal;
-  color: white;
+  color: #e67e22;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer a:hover {
+  color: #fff;  /* Muda a cor para branca ao passar o mouse */
+  transform: scale(1.1); /* Efeito de zoom */
 }
 
 #character-details {
