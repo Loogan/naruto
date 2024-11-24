@@ -1,3 +1,14 @@
-#char-picture{
+#char-picture {
   width: 190px;
+}
+
+.container_details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: justify;
 }
