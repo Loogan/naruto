@@ -22,12 +22,9 @@ body {
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(235deg, #2c3e50, #e67e22);
+  background-size: cover;
   width: 100%;
   min-height: 100vh;
-}
-
-main {
-  flex-grow: 1; /* Faz o conteúdo ocupar todo o espaço restante*/
 }
 
 header {
@@ -248,12 +245,14 @@ a {
 }
 
 footer {
+  width: 100%;
   background-color: rgba(0, 0, 0, 0.705);
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 140px;
+  flex-grow: 1;
 }
 
 .footer {
