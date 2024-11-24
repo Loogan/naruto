@@ -36,10 +36,6 @@ header {
   height: 60px;
 }
 
-section {
-  padding: 20px;
-}
-
 .hr-container {
   margin-top: 100px;
 }
@@ -257,9 +253,6 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 140px;
-  position: relative;
-  bottom: 0;
   width: 100%;
 }
 
