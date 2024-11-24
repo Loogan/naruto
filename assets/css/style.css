@@ -22,7 +22,7 @@ body {
   flex-direction: column;
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(235deg, #2c3e50, #e67e22);
-  background-size: cover;
+  
   width: 100%;
 }
 
@@ -249,10 +249,7 @@ a {
 }
 
 footer {
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.705);
-  position: relative;
-  bottom: 0;
   padding: 10px;
   display: flex;
   justify-content: center;
