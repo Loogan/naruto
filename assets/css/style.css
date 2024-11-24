@@ -14,7 +14,6 @@ header {
 
 html, body {
   overflow-x: hidden;
-  height: 100%
 }
 
 body {
@@ -34,6 +33,10 @@ header {
   width: 100%;
   background-color: rgb(197, 125, 16);
   height: 60px;
+}
+
+section {
+  padding: 20px;
 }
 
 .hr-container {
