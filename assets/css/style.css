@@ -246,13 +246,11 @@ a {
 
 footer {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.705);
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 140px;
-  flex-grow: 1;
 }
 
 .footer {
