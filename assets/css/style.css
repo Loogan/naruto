@@ -375,6 +375,9 @@ footer {
     gap: 2em;
     padding: 40px;
     width: 100%;
+    position: relative;
+    bottom: 0;
+    width: 100%;
   }
 }
 
